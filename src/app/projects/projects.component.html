@@ -1,0 +1,21 @@
+<div class="project-container">
+  <nz-carousel nzAutoPlay>
+    <div nz-carousel-content *ngFor="let vignette of headlines" [ngClass]="vignette.vignetteBgClass">
+
+      <div class="vignetteCard">
+        <div class="content">
+          <h1>{{vignette.projectName}}</h1>
+          <p *ngIf="vignette.serviceSummary"> <span class="subtitle">Services</span> <br/> {{vignette.serviceSummary}}</p>
+          <p *ngIf="vignette.projectBudget"> <span class="subtitle">Budget</span> <br/> {{vignette.projectBudget}}</p>
+          <p *ngIf="vignette.projectStatus"> <span class="subtitle">Status</span> <br/> {{vignette.projectStatus}}</p>
+
+          <span class="subtitle">Highlights</span> <br/>
+          <p *ngIf="vignette.description" [innerHTML]="vignette.description"></p>
+        </div>
+
+
+      </div>
+
+    </div>
+  </nz-carousel>
+</div>

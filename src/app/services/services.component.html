@@ -1,0 +1,12 @@
+<div class="service" *ngFor="let service of services">
+  <div class="pic">
+    <img [src]="service.img" alt="" style="width: 100%; height: auto;">
+  </div>
+  <div class="description">
+    <h3>{{service.serviceName}}</h3>
+    <p>{{service.serviceDescription}}</p>
+    <ul *ngIf="service.servicePoints" >
+      <li *ngFor="let item of service.servicePoints">{{item}}</li>
+    </ul>
+  </div>
+</div>

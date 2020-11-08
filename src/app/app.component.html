@@ -1,0 +1,25 @@
+<nz-layout>
+  <nz-header>
+    <img src="/assets/logo.svg" class="header-logo" alt="">
+    <ul nz-menu nzMode="horizontal" style="float:right">
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="['/', 'projects']">
+          Projects
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="['/', 'about']">
+          About
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="['/', 'contact']">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nz-header>
+  <nz-content>
+    <router-outlet></router-outlet>
+  </nz-content>
+</nz-layout>
